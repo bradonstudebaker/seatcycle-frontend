@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SeatCycle</title>
+    <link rel="stylesheet" href="./assets/style.css" type="text/css">
+    <!-- typeface (nunito) -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  </head>
+  <body>
+    <!-- nav bar -->    
+    <header>
+      <div class="navbar">
+        <div class="nav-flex">
+          <a href="#"><img src="assets/seatcycle_logo_1c_white@4x.png" class="nav-brand"></a>
+          <p class="nav-text">Flex pass</p>      
+        </div>  
+      </div>
+    </header>
+    <!-- main -->
+    <div class="main" style="display: flex; flex-direction: column; align-items: center; padding-left: 3rem;">
+      <!-- performer information -->
+      <div class="box tri-right btm-right" id="performer-box">
+        <!-- top layout for single perfomer -->
+        <div id="performer-box-top-single">
+          <img src="assets/performer_image.png" alt="performer" class="performer-image">
+          <div id="performer-box-top-body-single">  
+            <h2 id="performer-box-date">April 6</h2>
+            <h1>Earth Wind & Fire</h1>
+            <h2>Ravinia Festival</h2>
+          </div>
+        </div>
+        <!-- top layout for versus situation  
+        <div id="performer-box-top-double">
+          <img src="assets/performer_image.png" alt="performer" class="performer-image">
+          <div id="performer-box-top-body-double">  
+            <h1 id="performer-box-date">Apr 6</h1>
+            <h1>Blue Jackets vs Penguins</h1>
+            <h2>Nationwide Arena</h2>
+          </div>
+          <img src="assets/performer_image.png" alt="performer" class="performer-image">
+        </div> -->
+        <!-- bottom layout -->
+        <div id="performer-box-bottom">
+          <p>The Flex Pass guarantees entry to the event.<br>You will be assigned a seat in the zone specified below.</p>
+          <button type="button" id="learn-more">
+            <p>Learn More</p>
+          </button>
+        </div>
+      </div>
+      <!-- begin form -->
+      <form action="#" method="post"></form>
+        <!-- ticket quantity -->
+        <div class="box tri-right btm-right" id="quantity-box">
+          <h2>How many tickets do you want?</h2>
+          <!-- counter widget-->
+          <div class="ticket-counter">
+            <div id="minus">
+              <button type="button" onclick="decrement()">
+                <p>-</p>
+              </button>
+            </div>
+            <div id="counter">
+              <p id="counter-value">0</p>
+              <input id="counter-form-value" type="hidden" name="quantity" value="">
+            </div>
+            <div id="plus">
+              <button type="button" onclick="increment()">
+                <p>+</p>
+              </button>
+            </div>
+            <!-- counter placeholder logic -->
+            <script>
+              function increment() {
+                let val = parseInt((document.getElementById("counter-value").innerHTML), 10) + 1;
+                document.getElementById("counter-value").innerHTML =  val;
+                document.getElementById("counter-form-value").value =  val;
+              }
+              function decrement() {
+                let val = parseInt((document.getElementById("counter-value").innerHTML), 10) - 1;
+                if (val >= 0){
+                  document.getElementById("counter-value").innerHTML =  val;
+                  document.getElementById("counter-form-value").value =  val;
+                } 
+              }
+            </script>
+          </div>
+          <!-- select options -->
+          <h2>Select your Pass:</h2>
+          <img src="assets/map.png" alt="perfomer" class="map-image" >
+          <div class="select-pass">
+            <div>
+              <input type="checkbox" name="option" value="1">Lawn
+            </div>
+            <h2>$20</h2>
+          </div>
+          <div class="select-pass">
+          <div>
+            <input type="checkbox" name="option" value="2">Orchestra
+          </div>
+            <h2>$40</h2>
+          </div>
+        </div>
+        <!-- offers -->
+        <div class="box tri-right btm-right" id="offers-box">
+          <div class="option">
+        </div>
+        <!-- submit -->
+        <div id="checkout-btn">
+          <input type="submit" value="Checkout">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

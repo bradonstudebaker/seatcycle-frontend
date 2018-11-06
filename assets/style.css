@@ -1,0 +1,235 @@
+/* lil reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/* variables */
+:root {
+  --tf-blue: #1f88ff;
+  --tf-dark-blue: #1d7ce8;
+  --white: white;
+  --background: #eceff1;
+  --grey: #e3e2e7;
+}
+
+body {
+  font-family: Nunito, sans-serif;
+  line-height: 1.1;
+  background-color: var(--background); 
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1.65rem;
+}
+
+.form {
+  width: 100%;
+}
+
+/* navigation */
+.navbar {
+  overflow: hidden;
+  background-color: var(--tf-blue);
+  position: relative;
+  top: 0;
+  width: 100%;
+  border-bottom: .75rem solid var(--tf-dark-blue);
+}
+
+.navbar {
+  padding: 1rem 2rem;
+}
+
+.nav-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  height: 7rem;
+  padding-top: 1.25rem;
+}
+
+.nav-text {
+  font-size: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 1rem 5rem 0rem 0rem;
+  letter-spacing: 0.25rem;
+}
+ /* main */
+
+.box {
+  background-color: var(--white);
+  width: 85%;
+  margin: 2rem 0rem 2rem 0rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 6px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* performer-box */
+#performer-box-date {
+  text-transform: uppercase;
+}
+  /* top single */
+  #performer-box-top-single {
+    border-bottom: .25rem solid var(--grey);
+    padding-bottom: 4rem;
+  }
+
+  #performer-box-top-single > .performer-image {
+    float: left;
+  }
+
+  #performer-box-top-body-single {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  /* top double */
+  #performer-box-top-double {
+    border-bottom: .25rem solid var(--grey);
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #performer-box-top-body-double > h1 {
+    font-size: 2rem;
+  }
+
+
+  #performer-box-top-body-double {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  /* bottom */
+  #performer-box-bottom {
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  #performer-box-bottom  p {
+    font-size: 1.3rem;
+  }
+
+  #learn-more {
+    background-color: var(--tf-blue);
+    color: var(--white);
+    border-radius: 0.85rem;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+  }
+
+  #learn-more > p {
+    font-weight: 300;
+  }
+
+
+/* quantity-box */
+#quantity-box {
+  text-align: center;
+}
+
+.map-image {
+  width: 80%;
+}
+
+.ticket-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+#counter {
+  border: 0.25rem solid var(--grey);
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+}
+
+  #counter p {
+    font-size: 4rem;
+    color: black;
+  }
+
+.ticket-counter p {
+  font-size: 7rem;
+  font-weight: 200;
+  margin: 0rem 3rem;
+  color: var(--tf-blue);
+}
+
+.select-pass {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--grey);
+  height: 5rem;
+  padding: 0rem 3rem;
+  border-radius: 0.85rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.select-pass input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1rem;
+}
+
+/* offers-box */
+
+/* submit */
+
+/* speech bubbles */
+.tri-right.border.btm-right:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -8px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: white white transparent transparent;
+}
+
+
+
+
+
