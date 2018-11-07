@@ -7,7 +7,7 @@
     <!-- typeface (nunito) -->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   </head>
-  <body>
+  <body id="element">
     <!-- nav bar -->    
     <header>
       <div class="navbar">
@@ -69,42 +69,40 @@
                 <p>+</p>
               </button>
             </div>
-            <!-- counter placeholder logic -->
-            <script>
-              function increment() {
-                let val = parseInt((document.getElementById("counter-value").innerHTML), 10) + 1;
-                document.getElementById("counter-value").innerHTML =  val;
-                document.getElementById("counter-form-value").value =  val;
-              }
-              function decrement() {
-                let val = parseInt((document.getElementById("counter-value").innerHTML), 10) - 1;
-                if (val >= 0){
-                  document.getElementById("counter-value").innerHTML =  val;
-                  document.getElementById("counter-form-value").value =  val;
-                } 
-              }
-            </script>
           </div>
           <!-- select options -->
           <h2>Select your Pass:</h2>
           <img src="assets/map.png" alt="perfomer" class="map-image" >
           <div class="selection-box">
             <div class="inputGroup">
-              <input id="radio1" name="radio" type="radio"/>
+              <input id="radio1" name="section" type="radio" value=""/>
               <label for="radio1">Upper Bowl ($40)</label>
             </div>
             <div class="inputGroup">
-              <input id="radio2" name="radio" type="radio"/>
+              <input id="radio2" name="section" type="radio" value=""/>
               <label for="radio2">Lower Bowl ($20)</label>
             </div>
           </div>
-        </div>
-        <div class="price-box">
-          
+          <div class="price-row">
+            <h2 class="embolden">Ravinia Flex Pass</h2>
+            <h2 class="embolden">Total:</h2>
+          </div>
+          <div class="price-row">
+            <h2>Four Tickets</h2>
+            <h2>$40</h2>
+          </div>
         </div>
         <!-- offers -->
         <div class="box tri-right btm-right" id="offers-box">
-          <div class="option">
+          <h2>Would you like to receive exclusive offers on future deals like this?</h2>
+          <div class="inputGroup">
+            <input id="yes" name="offer" type="radio" value="yes"/>
+            <label for="yes">Yes, I love saving money!</label>
+          </div>
+          <div class="inputGroup">
+            <input id="no" name="offer" type="radio" value="no"/>
+            <label for="no">No thanks, I'd rather pay full price.</label>
+          </div>
         </div>
         <!-- submit -->
         <div id="checkout-btn">
@@ -112,5 +110,20 @@
         </div>
       </form>
     </div>
+    <!-- scripts -->
+    <script>
+      function increment() {
+        let val = parseInt((document.getElementById("counter-value").innerHTML), 10) + 1;
+        document.getElementById("counter-value").innerHTML =  val;
+        document.getElementById("counter-form-value").value =  val;
+      }
+      function decrement() {
+        let val = parseInt((document.getElementById("counter-value").innerHTML), 10) - 1;
+        if (val >= 0){
+          document.getElementById("counter-value").innerHTML =  val;
+          document.getElementById("counter-form-value").value =  val;
+        } 
+      }
+    </script>
   </body>
 </html>
